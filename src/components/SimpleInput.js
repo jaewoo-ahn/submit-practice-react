@@ -26,11 +26,6 @@ const SimpleInput = (props) => {
     formIsValid = true;
   }
 
-  //--------------------------------------------------------
-
-  //--------------------------------------------------------
-
-  //--------------------------------------------------------
   const formSubmissionHandler = (e) => {
     e.preventDefault();
 
@@ -38,13 +33,10 @@ const SimpleInput = (props) => {
       return;
     }
 
-    // nameInputRef.current.value = ""; => NOT IDEAL DON'T MANIPUALTE DOM
     resetNameInput();
 
     resetEmailInput();
   };
-
-  //--------------------------------------------------------
 
   const nameInputClasses = nameInputHasError
     ? "form-control invalid"
@@ -53,7 +45,6 @@ const SimpleInput = (props) => {
   const emailInputClasses = EmailInputHasError
     ? "form-control invalid"
     : "form-control";
-  //--------------------------------------------------------
 
   return (
     <form onSubmit={formSubmissionHandler}>
